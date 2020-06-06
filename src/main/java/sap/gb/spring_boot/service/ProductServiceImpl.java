@@ -1,4 +1,4 @@
-package sap.gb.spring_boot.Service;
+package sap.gb.spring_boot.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,8 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import sap.gb.spring_boot.model.Product;
 import sap.gb.spring_boot.repo.ProductRepo;
 import sap.gb.spring_boot.util.ProductSpecification;
-
-import java.util.List;
 
 
 @Service

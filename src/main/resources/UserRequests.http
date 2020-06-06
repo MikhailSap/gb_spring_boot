@@ -1,0 +1,35 @@
+GET localhost:8080/app/api/v1/user
+
+###
+
+POST localhost:8080/app/api/v1/user
+Content-Type: application/json
+
+{
+  "name": "Vasya",
+  "password": "qwe"
+}
+
+###
+
+GET localhost:8080/app/api/v1/user/1/id
+Accept: application/json
+
+
+###
+
+PUT localhost:8080/app/api/v1/user/
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "Goga",
+  "password": "123"
+}
+
+###
+
+DELETE localhost:8080/app/api/v1/user/2/id
+
+
+

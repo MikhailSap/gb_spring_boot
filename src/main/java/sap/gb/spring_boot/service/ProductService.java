@@ -1,10 +1,8 @@
-package sap.gb.spring_boot.Service;
+package sap.gb.spring_boot.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import sap.gb.spring_boot.model.Product;
-
-import java.util.List;
 
 
 public interface ProductService {
