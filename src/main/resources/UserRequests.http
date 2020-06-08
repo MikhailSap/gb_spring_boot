@@ -1,4 +1,4 @@
-GET localhost:8080/app/api/v1/user
+GET localhost:8080/app/api/v1/user/all
 
 ###
 
@@ -6,13 +6,13 @@ POST localhost:8080/app/api/v1/user
 Content-Type: application/json
 
 {
-  "name": "Vasya",
-  "password": "qwe"
+  "name": "Kolya",
+  "password": "zxc"
 }
 
 ###
 
-GET localhost:8080/app/api/v1/user/1/id
+GET localhost:8080/app/api/v1/user/5/id
 Accept: application/json
 
 
@@ -22,14 +22,14 @@ PUT localhost:8080/app/api/v1/user/
 Content-Type: application/json
 
 {
-  "id": "1",
+  "id": "5",
   "name": "Goga",
-  "password": "123"
+  "password": "strong"
 }
 
 ###
 
-DELETE localhost:8080/app/api/v1/user/2/id
+DELETE localhost:8080/app/api/v1/user/4/id
 
 
 

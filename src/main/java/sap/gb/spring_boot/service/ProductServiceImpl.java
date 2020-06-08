@@ -36,13 +36,13 @@ public class ProductServiceImpl implements ProductService {
         Specification specification = ProductSpecification.trueLiteral();
 
         if (min != null) {
-            specification.and(ProductSpecification.priceGreaterThan(min));
+            specification = specification.and(ProductSpecification.priceGreaterThan(min));
         }
         if (max != null) {
-            specification.and(ProductSpecification.priceLessThan(max));
+            specification = specification.and(ProductSpecification.priceLessThan(max));
         }
         if (partOfName != null && !partOfName.isEmpty()) {
-            specification.and(ProductSpecification.nameLike(partOfName));
+            specification = specification.and(ProductSpecification.nameLike(partOfName));
         }
         return productRepo.findAll(specification, pageable);
     }

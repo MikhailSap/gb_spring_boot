@@ -33,8 +33,13 @@ public class UserSeviceImpl implements UserService{
         return userRepo.findById(id);
     }
 
+    public void updateUser(User user) throws NoSuchUserException{
+        findUserById(user.getId()).orElseThrow(NoSuchUserException::new);
+        saveUser(user);
+    }
+
     @Override
-    public void deleteUser(Long id) {
+    public void deleteUser(Long id) throws NoSuchUserException{
         userRepo.delete(findUserById(id)
                 .orElseThrow(NoSuchUserException::new));
     }

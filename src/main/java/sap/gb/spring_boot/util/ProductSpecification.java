@@ -10,12 +10,12 @@ public class ProductSpecification {
     }
 
     public static Specification<Product> priceGreaterThan(Integer min) {
-        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.greaterThan(root.get("price"), min));
+        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.greaterThanOrEqualTo(root.get("price"), min));
 
     }
 
     public static Specification<Product> priceLessThan(Integer max) {
-        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.lessThan(root.get("price"), max));
+        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.lessThanOrEqualTo(root.get("price"), max));
 
     }
 

@@ -1,0 +1,5 @@
+-Mihail:~ mihailmihail$ curl localhost:8080/app/api/v1/user/all
+[{"id":1,"name":"Goga","password":"123"},{"id":3,"name":"Vasya","password":"qwe"},{"id":4,"name":"Kolya","password":"zxc"}]MacBook-Air-Mihail:~ mihailmihail$
+MacBook-Air-Mihail:~ mihailmihail$ curl --request POST --header "Content-Type: application/json" --data '{"name":"Mike","password":"asd"}' http://localhost:8080/app/api/v1/user
+MacBook-Air-Mihail:~ mihailmihail$ curl localhost:8080/app/api/v1/user/all
+[{"id":1,"name":"Goga","password":"123"},{"id":3,"name":"Vasya","password":"qwe"},{"id":4,"name":"Kolya","password":"zxc"},{"id":6,"name":"Mike","password":"asd"}]MacBook-Air-Mihail:~ mihailmihail$
