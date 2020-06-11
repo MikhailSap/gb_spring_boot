@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -33,7 +34,19 @@
             </li>
         </ul>
 
-        <form class="form-inline my-2 my-lg-0" action="#" method="post">
+        <div class="container">
+            <div sec:authorize="isAuthenticated()">
+                User:
+                <div sec:authentication="principal.username"></div>
+                Roles:
+                <div sec:authentication="principal.authorities"></div>
+            </div>
+            <div sec:authorize="hasRole('ADMIN')">
+                You not allow to add users!
+            </div>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0" th:action="@{/logout}" th:method="post">
             <button class="btn btn-outline-success my-2 my-sm-0">Logout</button>
         </form>
     </div>
